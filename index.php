@@ -1,7 +1,17 @@
 <?php
-require './classes/Vehicule.php';
-require './classes/voiture.php';
-require './classes/Coupe.php';
+require_once './classes/Vehicule.php';
+require_once './classes/voiture.php';
+require_once './classes/Coupe.php';
+
+require_once './classes/Animal.php';
+require_once './classes/Vertebre.php';
+require_once './classes/Mammifere.php';
+
+$chat = new Mammifere();
+var_dump($chat);
+
+
+
 
 $toto = new Coupe('Peugeot','504','vert',[2000,1000,1000],1200);
 var_dump($toto);
@@ -17,5 +27,7 @@ $voiture2->vitesse = 30;
 echo $voiture1->calculerEnergieCinetique().'<br>';
 $voiture1->vitesse= 20;
 echo $voiture1->calculerEnergieCinetique();
+
+
 
 
