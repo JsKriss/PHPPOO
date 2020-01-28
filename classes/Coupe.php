@@ -1,7 +1,7 @@
 <?php
 
 
-class Coupe extends voiture
+ final class Coupe extends voiture
 {
     public $nombrePortes = 2;
 }
