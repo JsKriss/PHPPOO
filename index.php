@@ -1,11 +1,8 @@
 <?php
-require_once './classes/Vehicule.php';
-require_once './classes/voiture.php';
-require_once './classes/Coupe.php';
+date_default_timezone_set('Europe/Paris');
+require_once './functions/classAutoloader.php';
+spl_autoload_register('classAutoLoader');
 
-require_once './classes/Animal.php';
-require_once './classes/Vertebre.php';
-require_once './classes/Mammifere.php';
 
 $chat = new Mammifere();
 var_dump($chat);
