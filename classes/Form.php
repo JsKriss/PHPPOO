@@ -16,6 +16,9 @@ class Form
 
     }
 
+
+
+
     public function beginHtml($titre): string
     {
         $html = '<!DOCTYPE html>';
@@ -59,16 +62,13 @@ class Form
                     $html .= '<label for="' . $typeBalise[1] . '">' . ucfirst($typeBalise[1]) . '</label>';
                 }
 
-                if ($this->iniFile[$key]['type'] === 'submit' || $this->iniFile[$key]['type'] === 'reset'){
-                $html .= '<input type="' . $this->iniFile[$key]['type'] . '" ' . 'value="' . $this->iniFile[$key]['value']. '"/>';
-                }else {
+                if ($this->iniFile[$key]['type'] === 'submit' || $this->iniFile[$key]['type'] === 'reset') {
+                    $html .= '<input type="' . $this->iniFile[$key]['type'] . '" ' . 'value="' . $this->iniFile[$key]['value'] . '"/>';
+                } else {
 
                     $html .= '<input type="' . $this->iniFile[$key]['type'] . '" ' . 'id ="' . $typeBalise[1] . '" ' . 'name="' . $typeBalise[1] . '" ' . 'placeholder="Veuillez saisir votre ' . $typeBalise[1] . '" ' . '/>';
-
-
                     $html .= '</div>';
                 }
-
 
             }
 
@@ -78,3 +78,4 @@ class Form
         return $html;
     }
 }
+
