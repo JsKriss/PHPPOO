@@ -3,6 +3,10 @@ date_default_timezone_set('Europe/Paris');
 require_once './functions/classAutoloader.php';
 spl_autoload_register('classAutoLoader');
 
+$formulaire = new Form('index.php?page=validation','FrmContact');
+
+
+echo $formulaire->displayForm();
 
 $chat = new Mammifere();
 var_dump($chat);
