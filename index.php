@@ -1,19 +1,13 @@
 <?php
 date_default_timezone_set('Europe/Paris');
-require_once './functions/classAutoloader.php';
+require_once './functions/classAutoLoader.php';
 spl_autoload_register('classAutoLoader');
-//Le  @  devant une fonction par exmemple permet de ne pas afficher le message d'erreur
 
-Log::logWrite('oui');
+Log::logWrite('Bonjour Michel');
 
-$formulaire = new Form('index.php?page=validation','FrmContact');
+$formulaire = new Form('index.php?page=validation', 'frmContact');
 
-$html = $formulaire->beginHtml( 'je fait des formulaires en objet');
-echo $formulaire->displayForm();
+$html = $formulaire->beginHtml('Je fais des formulaires en objet');
+$html .= $formulaire->displayForm();
 $html .= $formulaire->endHtml();
 echo $html;
-
-
-
-
-

@@ -1,11 +1,8 @@
 <?php
 
-
 class Voiture extends Vehicule
 {
-
-
-    public function __construct(string $mar, string $mod, string  $cou, array $dim, int  $mas )
+    public function __construct(string $mar, string $mod, string $cou, array $dim, int $mas)
     {
         $this->marque = $mar;
         $this->modele = $mod;
@@ -16,7 +13,7 @@ class Voiture extends Vehicule
 
     public function getMarque()
     {
-    return $this->marque;
+        return $this->marque;
     }
 
     public function setMarque($m) : void
@@ -24,9 +21,8 @@ class Voiture extends Vehicule
         $this->marque = $m;
     }
 
-    public function calculerEnergieCinetique(): float
+    public function calculerEnergieCinetique() : float
     {
-         return 0.5 * $this->masse * $this->vitesse ** 2;
+        return 0.5 * $this->masse * $this->vitesse ** 2;
     }
 }
-

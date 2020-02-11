@@ -1,9 +1,8 @@
 <?php
 
-
 interface Requete
 {
-public function inserer;
-public function recuperer;
-public function modifier;
+    public function inserer($a, $b);
+    public function recuperer();
+    public function modifier();
 }
