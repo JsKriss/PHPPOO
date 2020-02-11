@@ -19,6 +19,8 @@ class Form
 
 
 
+
+
     public function beginHtml($titre): string
     {
         $html = '<!DOCTYPE html>';
